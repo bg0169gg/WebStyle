@@ -1,0 +1,208 @@
+
+/* Global-scope values */
+
+:root {
+    color-scheme: light dark;
+
+    --main-colors-light-pink: #d66d7e;
+    --main-colors-light-blue: #68caea;
+    --main-colors-light-green: #69e269;
+
+    --colors-light-bg: #f3f3f3;
+    --colors-light-header: #dfdfdf;
+    --colors-light-button-fill: #efefef;
+    --colors-light-button-font: #222222;
+    --colors-light-button-hover: #ffffff;
+    --colors-light-headbar-bg: #dfdfdf;
+
+    --main-colors-dark-pink: #974956;
+    --main-colors-dark-blue: #4f9db6;
+    --main-colors-dark-green: #48a748;
+
+    --colors-dark-bg: #202020;
+    --colors-dark-header: #2f2f2f;
+    --colors-dark-button-fill: #3f3f3f;
+    --colors-dark-button-font: #dddddd;
+    --colors-dark-button-hover: #4f4f4f;
+    --colors-dark-headbar-bg: #2f2f2f;
+
+    --header-default-height: 70px;
+    --default-button-transition: ease-in 175ms;
+    --default-title-font-family: 'Microsoft YaHei', Tahoma, Ubuntu;
+    --default-heading-font-family: 'Segoe UI', Ubuntu;
+    --special-heading-font-family: 'Nature Beauty', 'Ink Free';
+    --special-heading-letter-spacing: 1.5px;
+    --default-subheading-font-family: 'Segoe UI', 'Open Sans';
+}
+@font-face {
+    font-family: "Nature Beauty";
+    src: url(../Assets/Fonts/NatureBeautyFont-abstract.ttf);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Global-scope page elements */
+
+header {
+    top: 0;
+    position: fixed;
+    transition-duration: 0.4s;
+    width: 100%;
+    height: var(--header-default-height);
+    display: flex;
+    flex-direction: row;
+    -ms-flex-direction: row;
+    flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+left, right {
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: row;
+    -ms-flex-direction: row;
+    flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    align-items: center;
+}
+#header-title {
+    font-size: 24px;
+    font-weight: 750;
+    font-family: var(--default-title-font-family);
+    margin-left: 10px;
+    text-decoration: none;
+    color: transparent;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-clip: text;
+    -moz-background-clip: text;
+    -webkit-background-clip: text;
+}
+.header-button {
+    display: grid;
+    align-items: center;
+    font-size: 28px;
+    padding: 4px;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    margin-left: 2px;
+}
+
+.headbar {
+    position: fixed;
+    top: var(--header-default-height);
+    width: 100%;
+    z-index: 1;
+    display: none;
+    flex-direction: column;
+    -ms-flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+headbar-menus {
+    display: flex;
+    flex-direction: row;
+    -ms-flex-direction: row;
+    flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    align-items: flex-start;
+}
+headbar-menu {
+    display: flex;
+    flex-direction: column;
+    -ms-flex-direction: column;
+    margin: 5px;
+    align-items: center;
+}
+.headbar-menu {
+    display: flex;
+    flex-direction: column;
+    -ms-flex-direction: column;
+}
+.headbar-button {
+    color: white;
+    background-color: var(--colors-dark-button-fill);
+    padding: 2px 4px;
+    border-radius: 6px;
+    margin: 2px;
+}
+
+
+/* Customization & Animations */
+
+.headbar-open {
+    display: flex;
+    display: -webkit-flex;
+}
+
+.site-button {
+    transition: var(--site-button-transition);
+    -o-transition: var(--site-button-transition);
+    -moz-transition: var(--site-button-transition);
+    -webkit-transition: var(--site-button-transition);
+    background: none;
+}
+
+@media (prefers-color-scheme: light) {
+    body {
+        background-color: var(--colors-light-bg);
+    }
+    header {
+        background: linear-gradient(to bottom, var(--colors-light-header), transparent);
+    }
+    header:hover, .header_headbar-open {
+        background-color: var(--colors-light-header);
+    }
+    .header-button {
+        background-color: transparent;
+        color: var(--colors-light-button-font);
+    }
+    .header-button:hover {
+        background-color: var(--colors-light-button-hover);
+    }
+    #header-title {
+        background-image: url(../Assets/Images/title-light.png);
+    }
+    .headbar {
+        background-color: var(--colors-light-headbar-bg);
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: var(--colors-dark-bg);
+    }
+    header {
+        background: linear-gradient(to bottom, var(--colors-dark-header), transparent);
+    }
+    header:hover, .header_headbar-open {
+        background-color: var(--colors-dark-header);
+    }
+    .header-button {
+        background-color: transparent;
+        color: var(--colors-dark-button-font);
+    }
+    .header-button:hover {
+        background-color: var(--colors-dark-button-hover);
+    }
+    #header-title {
+        background-image: url(../Assets/Images/title-dark.png);
+    }
+    .headbar {
+        background-color: var(--colors-dark-headbar-bg);
+    }
+}
+
+/* Constraits */
+
+@media only screen and (max-width: 550px) {
+}

@@ -1,0 +1,190 @@
+
+/* Page-scope EOU values */
+
+:root {
+    --help-categories-light-hover-fill: #efefef88;
+    --help-categories-dark-hover-fill: #3f3f3f88;
+}
+
+/* Page-scope elements */
+
+content {
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    -ms-flex-direction: column;
+}
+top {
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    -ms-flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-size: cover;
+}
+.top-rounded {
+    border-radius: 25px;
+}
+#Help-Heading {
+    font-family: var(--special-heading-font-family);
+    font-size: 92px;
+    font-weight: bolder;
+    letter-spacing: var(--special-heading-letter-spacing);
+}
+#Help-Subheading {
+    font-family: var(--default-subheading-font-family);
+    font-size: 24px;
+    font-weight: bold;
+}
+search {
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: row;
+    -ms-flex-direction: row;
+    flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    justify-content: center;
+    margin: 15px;
+}
+#help-searchbox,
+#help-searchsubmit {
+    height: 35px;
+    padding: 5px;
+    margin: 2px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+}
+#help-searchbox {
+    width: 50vw;
+}
+#help-searchsubmit {
+    width: 35px;
+}
+.help-categories {
+    position: relative;
+    margin: 15px;
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    -ms-flex-direction: column;
+    transform: translateY(20vh);
+    align-items: center;
+    border: none;
+    border-radius: 6px;
+    padding: 5px;
+}
+#help-categories-downicon {
+    text-align: center;
+    width: fit-content;
+    padding: 2px;
+    font-size: 18px;
+    margin-bottom: 12px;
+    border-radius: 50%;
+}
+
+
+/* Customization & Animations */
+
+@media (prefers-color-scheme: light) {
+    top {
+        background: linear-gradient(180deg, #68caea, #d66d7e, #69e269);
+        background-size: 600% 600%;
+        -webkit-animation: bg-light 27s ease infinite;
+        -moz-animation: bg-light 27s ease infinite;
+        -o-animation: bg-light 27s ease infinite;
+        animation: bg-light 27s ease infinite;
+    }
+    @-webkit-keyframes bg-light {
+        0%{background-position:50% 0%}
+        50%{background-position:51% 100%}
+        100%{background-position:50% 0%}
+    }
+    @-moz-keyframes bg-light {
+        0%{background-position:50% 0%}
+        50%{background-position:51% 100%}
+        100%{background-position:50% 0%}
+    }
+    @-o-keyframes bg-light {
+        0%{background-position:50% 0%}
+        50%{background-position:51% 100%}
+        100%{background-position:50% 0%}
+    }
+    @keyframes bg-light {
+        0%{background-position:50% 0%}
+        50%{background-position:51% 100%}
+        100%{background-position:50% 0%}
+    }
+    #Help-Heading,
+    #Help-Subheading,
+    #help-categories-text {
+        color: #ffffff;
+    }
+    .help-categories {
+        background: transparent;
+    }
+    .help-categories:hover {
+        background-color: var(--help-categories-light-hover-fill);
+        #help-categories-text {
+            color: var(--colors-light-button-font);
+        }
+    }
+    #help-categories-downicon {
+        color: var(--colors-light-button-font);
+        background-color: var(--colors-light-button-fill);
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    top {
+        background: linear-gradient(180deg, #68caea, #d66d7e, #69e269);
+        background-size: 600% 600%;
+        -webkit-animation: bg-light 27s ease infinite;
+        -moz-animation: bg-light 27s ease infinite;
+        -o-animation: bg-light 27s ease infinite;
+        animation: bg-light 27s ease infinite;
+    }
+    @-webkit-keyframes bg-light {
+        0%{background-position:50% 0%}
+        50%{background-position:51% 100%}
+        100%{background-position:50% 0%}
+    }
+    @-moz-keyframes bg-light {
+        0%{background-position:50% 0%}
+        50%{background-position:51% 100%}
+        100%{background-position:50% 0%}
+    }
+    @-o-keyframes bg-light {
+        0%{background-position:50% 0%}
+        50%{background-position:51% 100%}
+        100%{background-position:50% 0%}
+    }
+    @keyframes bg-light {
+        0%{background-position:50% 0%}
+        50%{background-position:51% 100%}
+        100%{background-position:50% 0%}
+    }
+    #Help-Heading,
+    #Help-Subheading,
+    #help-categories-text {
+        color: #000000;
+    }
+    .help-categories {
+        background: transparent;
+    }
+    .help-categories:hover {
+        background-color: var(--help-categories-dark-hover-fill);
+        #help-categories-text {
+            color: var(--colors-dark-button-font);
+        }
+    }
+    #help-categories-downicon {
+        color: var(--colors-dark-button-font);
+        background-color: var(--colors-dark-button-fill);
+    }
+}
+
+/* Constraits */
+
