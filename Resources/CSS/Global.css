@@ -8,7 +8,7 @@
     --main-colors-light-blue: #68caea;
     --main-colors-light-green: #69e269;
 
-    --colors-light-bg: #f3f3f3;
+    --colors-light-bg: #ffffff;
     --colors-light-header: #dfdfdf;
     --colors-light-button-fill: #efefef;
     --colors-light-button-font: #222222;
@@ -19,7 +19,7 @@
     --main-colors-dark-blue: #4f9db6;
     --main-colors-dark-green: #48a748;
 
-    --colors-dark-bg: #202020;
+    --colors-dark-bg: #000000;
     --colors-dark-header: #2f2f2f;
     --colors-dark-button-fill: #3f3f3f;
     --colors-dark-button-font: #dddddd;
@@ -31,8 +31,12 @@
     --default-title-font-family: 'Microsoft YaHei', Tahoma, Ubuntu;
     --default-heading-font-family: 'Segoe UI', Ubuntu;
     --special-heading-font-family: 'Nature Beauty', 'Ink Free';
-    --special-heading-letter-spacing: 1.5px;
+    --special-heading-letter-spacing: 1.75px;
     --default-subheading-font-family: 'Segoe UI', 'Open Sans';
+    --default-button-icon-fontsize: 28px;
+
+    --help-categories-light-hover-fill: #efefef88;
+    --help-categories-dark-hover-fill: #3f3f3f88;
 }
 @font-face {
     font-family: "Nature Beauty";
@@ -64,7 +68,7 @@ header {
     justify-content: space-between;
     align-items: center;
 }
-left, right {
+header-left, header-right {
     display: flex;
     display: -webkit-flex;
     flex-direction: row;
@@ -86,63 +90,252 @@ left, right {
     -moz-background-clip: text;
     -webkit-background-clip: text;
 }
+HeaderSearchbox {
+    display: none;
+}
+.HeaderSearchBoxActive {
+    display: flex;
+}
 .header-button {
     display: grid;
     align-items: center;
-    font-size: 28px;
-    padding: 4px;
+    justify-content: center;
+    font-size: var(--default-button-icon-fontsize);
+    padding: 5px;
     text-decoration: none;
     border: none;
     border-radius: 5px;
     margin-left: 2px;
 }
 
-.headbar {
-    position: fixed;
-    top: var(--header-default-height);
-    width: 100%;
-    z-index: 1;
+.page-sidebar {
     display: none;
-    flex-direction: column;
-    -ms-flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-headbar-menus {
-    display: flex;
     flex-direction: row;
     -ms-flex-direction: row;
     flex-wrap: nowrap;
     -ms-flex-wrap: nowrap;
-    align-items: flex-start;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: #3f3f3f88;
 }
-headbar-menu {
-    display: flex;
-    flex-direction: column;
-    -ms-flex-direction: column;
-    margin: 5px;
-    align-items: center;
-}
-.headbar-menu {
-    display: flex;
-    flex-direction: column;
-    -ms-flex-direction: column;
-}
-.headbar-button {
-    color: white;
-    background-color: var(--colors-dark-button-fill);
-    padding: 2px 4px;
-    border-radius: 6px;
-    margin: 2px;
-}
-
-
-/* Customization & Animations */
-
-.headbar-open {
+.page-sidebar_Active {
     display: flex;
     display: -webkit-flex;
 }
+.page-sidebar-module {
+    height: 100%;
+    width: 20%;
+    background-color: #2f2f2f;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+.page-sidebar-submodule {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+sidebar-header {
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: row;
+    -ms-flex-direction: row;
+    flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    align-items: center;
+    margin: 25px;
+}
+.sidebar-button {
+    display: grid;
+    display: -ms-grid;
+    display: -moz-grid;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    font-size: var(--default-button-icon-fontsize);
+    padding: 5px;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+}
+.sidebar-button i {margin: 1px;}
+content {
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    -ms-flex-direction: column;
+}
+.site-top {
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    -ms-flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-size: cover;
+}
+
+.Homepage-Heading,
+.TutorialPage-Heading {
+    font-family: var(--special-heading-font-family);
+    font-size: 92px;
+    font-weight: bolder;
+    letter-spacing: var(--special-heading-letter-spacing);
+}
+.Homepage-Subheading,
+.TutorialPage-SubHeading {
+    font-family: var(--default-subheading-font-family);
+    font-size: 20px;
+    font-weight: bold;
+    padding: 0 15vw;
+    text-align: center;
+}
+HomepageSearchBox {
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: row;
+    -ms-flex-direction: row;
+    flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    justify-content: center;
+    margin: 20px;
+}
+#MainSearchEngineBox,
+#MainSearchEngineSubmit {
+    height: 35px;
+    padding: 5px;
+    margin: 2px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+}
+#MainSearchEngineBox {
+    width: 50vw;
+}
+#MainSearchEngineSubmit {
+    width: 35px;
+}
+
+#ScrollDownButton {
+    margin: 15vh 15px 15px;
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    -ms-flex-direction: column;
+    align-items: center;
+    border: none;
+    border-radius: 25px;
+    padding: 12px;
+    transition: var(--default-button-transition);
+}
+#ScrollDownButton-icon {
+    text-align: center;
+    width: fit-content;
+    padding: 2px;
+    font-size: 18px;
+    margin-bottom: 12px;
+    border-radius: 50%;
+}
+#ScrollDownButton-text {
+    font-size: 14px;
+}
+
+content-categories {
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    -ms-flex-direction: column;
+    flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+}
+subcategories {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+category-block {
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: row;
+    -ms-flex-direction: row;
+    flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    padding: 10px;
+    margin: 15px;
+    border-radius: 12px;
+    background-color: #ffffff55;
+}
+#Category-block-image {
+    width: 20%;
+    border-radius: 6px;
+}
+#Category-block-text {
+    margin-left: 10px;
+    font-size: 16px;
+}
+
+bullet-points {
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: row;
+    -ms-flex-direction: row;
+    flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    justify-content: space-evenly;
+    padding: 0 5vw;
+}
+bullet {
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    -ms-flex-direction: column;
+    flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    align-items: center;
+    margin: 15px;
+    padding: 10px;
+    border-radius: 12px;
+    background-color: #ffffff55;
+}
+#bullet-icon {
+    font-size: 36px;
+    margin: 3px;
+}
+#bullet-text {
+    font-size: 16px;
+}
+
+tutorial-section {
+    margin: 10px;
+    padding: 5px;
+    border-radius: 15px;
+    background-color: var(--main-colors-dark-blue);
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    -ms-flex-direction: column;
+    flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+}
+tutorial-point {
+    display: grid;
+    display: -ms-grid;
+    display: -moz-grid;
+    justify-content: center;
+}
+.tutorial-categoryselector {
+    margin: 2px;
+    padding: 5px;
+    background-color: transparent;
+    backdrop-filter: brightness(75%);
+    border-radius: 12px;
+}
+
+/* Customization & Animations */
 
 .site-button {
     transition: var(--site-button-transition);
@@ -153,13 +346,39 @@ headbar-menu {
 }
 
 @media (prefers-color-scheme: light) {
-    body {
-        background-color: var(--colors-light-bg);
+    body {background-color: var(--colors-light-bg);}
+    .homepage-body {
+        background: linear-gradient(180deg, var(--main-colors-light-blue), var(--main-colors-light-pink), var(--main-colors-light-green));
+        background-size: 600% 600%;
+        -webkit-animation: bg-light 27s ease infinite;
+        -moz-animation: bg-light 27s ease infinite;
+        -o-animation: bg-light 27s ease infinite;
+        animation: bg-light 27s ease infinite;
+    }
+    @-webkit-keyframes bg-light {
+        0%{background-position:50% 0%}
+        50%{background-position:51% 100%}
+        100%{background-position:50% 0%}
+    }
+    @-moz-keyframes bg-light {
+        0%{background-position:50% 0%}
+        50%{background-position:51% 100%}
+        100%{background-position:50% 0%}
+    }
+    @-o-keyframes bg-light {
+        0%{background-position:50% 0%}
+        50%{background-position:51% 100%}
+        100%{background-position:50% 0%}
+    }
+    @keyframes bg-light {
+        0%{background-position:50% 0%}
+        50%{background-position:51% 100%}
+        100%{background-position:50% 0%}
     }
     header {
         background: linear-gradient(to bottom, var(--colors-light-header), transparent);
     }
-    header:hover, .header_headbar-open {
+    header:hover {
         background-color: var(--colors-light-header);
     }
     .header-button {
@@ -172,19 +391,60 @@ headbar-menu {
     #header-title {
         background-image: url(../Assets/Images/title-light.png);
     }
-    .headbar {
-        background-color: var(--colors-light-headbar-bg);
+    #Homepage-Heading,
+    #Homepage-Subheading,
+    #ScrollDownButton-text {
+        color: #ffffff;
+    }
+    #ScrollDownButton {
+        background: transparent;
+    }
+    #ScrollDownButton:hover {
+        background-color: var(--help-categories-light-hover-fill);
+        #help-categories-text {
+            color: var(--colors-light-button-font);
+        }
+    }
+    #ScrollDownButton-icon {
+        color: var(--colors-light-button-font);
+        background-color: var(--colors-light-button-fill);
     }
 }
 
 @media (prefers-color-scheme: dark) {
-    body {
-        background-color: var(--colors-dark-bg);
+    body {background-color: var(--colors-dark-bg);}
+    .homepage-body {
+        background: linear-gradient(180deg, var(--main-colors-dark-blue), var(--main-colors-dark-pink), var(--main-colors-dark-green));
+        background-size: 600% 600%;
+        -webkit-animation: bg-light 27s ease infinite;
+        -moz-animation: bg-light 27s ease infinite;
+        -o-animation: bg-light 27s ease infinite;
+        animation: bg-light 27s ease infinite;
+    }
+    @-webkit-keyframes bg-light {
+        0%{background-position:50% 0%}
+        50%{background-position:51% 100%}
+        100%{background-position:50% 0%}
+    }
+    @-moz-keyframes bg-light {
+        0%{background-position:50% 0%}
+        50%{background-position:51% 100%}
+        100%{background-position:50% 0%}
+    }
+    @-o-keyframes bg-light {
+        0%{background-position:50% 0%}
+        50%{background-position:51% 100%}
+        100%{background-position:50% 0%}
+    }
+    @keyframes bg-light {
+        0%{background-position:50% 0%}
+        50%{background-position:51% 100%}
+        100%{background-position:50% 0%}
     }
     header {
         background: linear-gradient(to bottom, var(--colors-dark-header), transparent);
     }
-    header:hover, .header_headbar-open {
+    header:hover {
         background-color: var(--colors-dark-header);
     }
     .header-button {
@@ -197,8 +457,23 @@ headbar-menu {
     #header-title {
         background-image: url(../Assets/Images/title-dark.png);
     }
-    .headbar {
-        background-color: var(--colors-dark-headbar-bg);
+    #Homepage-Heading,
+    #Homepage-Subheading,
+    #ScrollDownButton-text {
+        color: #ffffff;
+    }
+    #ScrollDownButton {
+        background: transparent;
+    }
+    #ScrollDownButton:hover {
+        background-color: var(--help-categories-dark-hover-fill);
+        #help-categories-text {
+            color: var(--colors-dark-button-font);
+        }
+    }
+    #ScrollDownButton-icon {
+        color: var(--colors-dark-button-font);
+        background-color: var(--colors-dark-button-fill);
     }
 }
 

@@ -10,25 +10,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!--Site Customization & Plugins-->
-    <link rel="shortcut icon" href="./Assets/Icons/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" href="./Assets/Icons/favicon.png">
-    <link rel="stylesheet" href="./Resources/CSS/Global.css">
-    <link rel="stylesheet" href="./Resources/CSS/homepage.css">
-    <script src="./Resources/JavaScript/Global.js"></script>
-    <script src="./Resources/JavaScript/homepage.js"></script>
-    <script type="module/JavaScript" src="./Resources/JavaScript/Global.jsx"></script>
+    <link rel="shortcut icon" href="/Resources/Assets/Icons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/Resources/Assets/Icons/favicon.png">
+    <link rel="stylesheet" href="/Resources/CSS/Global.css">
+    <script src="/Resources/JavaScript/Global.js" defer></script>
 
-    <!--3rd party Dependencies-->
+    <!--3rd party Dependencie2s-->
     <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
-    <link rel="stylesheet" href="./Resources/CSS/flickity.css">
-    <script src="./Resources/JavaScript/Libraries/jquery.js"></script>
-    <script src="./Resources/JavaScript/Libraries/flickity.pkgd.js"></script>
+    <link rel="stylesheet" href="/Resources/CSS/flickity.css">
+    <script src="/Resources/JavaScript/jquery.js"></script>
+    <script src="/Resources/JavaScript/flickity.pkgd.js"></script>
 </head>
-<body>
+<body class="homepage-body">
     <header>
-        <left>
+        <header-left>
             <div class="header-sidebar-toggle">
-                <button class="header-button" id="sidebar-toggle" onclick="ToggleHeadbar()">
+                <button class="header-button" onclick="SidebarToggle()">
                     <i class='bx bx-menu-alt-left'></i>
                 </button>
             </div>
@@ -37,58 +34,132 @@
                     WebStyle
                 </a>
             </div>
-        </left>
-        <right>
+        </header-left>
+        <header-right>
+            <HeaderSearchbox>
+                <input id="MainSearchEngineBox" type="search" placeholder="Search by topic or keywords">
+                <button id="MainSearchEngineSubmit" type="submit" onclick="SearchEngineCmd()"><i class="bx bx-search-alt"></i></button>
+            </HeaderSearchbox>
             <div class="header-user">
-                <a class="header-button" href="/user/" id="header-user">
+                <a class="header-button" href="/user/">
                     <i class='bx bx-user-circle'></i>
                 </a>
             </div>
-        </right>
+        </header-right>
     </header>
     <div id="UserHoverPopUp"></div>
-    <headbar class="headbar" onmouseleave="ToggleHeadbar()">
-        <headbar-menus>
-            <headbar-menu>
-                <p class="menu-title">Topics & Languages</p>
-                <ul class="headbar-menu">
-                    <a href="" rel="noopener noreferrer"><i class="bx bx-chevron-right"></i>dummy link</a>
-                    <a href="" rel="noopener noreferrer"><i class="bx bx-chevron-right"></i>dummy link</a>
-                    <a href="" rel="noopener noreferrer"><i class="bx bx-chevron-right"></i>dummy link</a>
-                    <a href="" rel="noopener noreferrer"><i class="bx bx-chevron-right"></i>dummy link</a>
-                    <a href="" rel="noopener noreferrer"><i class="bx bx-chevron-right"></i>dummy link</a>
-                    <a href="" rel="noopener noreferrer"><i class="bx bx-chevron-right"></i>dummy link</a>
-                </ul>
-            </headbar-menu>
-            <headbar-menu>
-                <p class="menu-title">Topics & Languages</p>
-                <ul class="headbar-menu">
-                    <a href="" rel="noopener noreferrer"><i class="bx bx-chevron-right"></i>dummy link</a>
-                    <a href="" rel="noopener noreferrer"><i class="bx bx-chevron-right"></i>dummy link</a>
-                    <a href="" rel="noopener noreferrer"><i class="bx bx-chevron-right"></i>dummy link</a>
-                    <a href="" rel="noopener noreferrer"><i class="bx bx-chevron-right"></i>dummy link</a>
-                    <a href="" rel="noopener noreferrer"><i class="bx bx-chevron-right"></i>dummy link</a>
-                </ul>
-            </headbar-menu>
-            <headbar-menu>
-                <p class="menu-title">Topics & Languages</p>
-                <ul class="headbar-menu">
-                    <a href="" rel="noopener noreferrer"><i class="bx bx-chevron-right"></i>dummy link</a>
-                    <a href="" rel="noopener noreferrer"><i class="bx bx-chevron-right"></i>dummy link</a>
-                    <a href="" rel="noopener noreferrer"><i class="bx bx-chevron-right"></i>dummy link</a>
-                    <a href="" rel="noopener noreferrer"><i class="bx bx-chevron-right"></i>dummy link</a>
-                    <a href="" rel="noopener noreferrer"><i class="bx bx-chevron-right"></i>dummy link</a>
-                    <a href="" rel="noopener noreferrer"><i class="bx bx-chevron-right"></i>dummy link</a>
-                    <a href="" rel="noopener noreferrer"><i class="bx bx-chevron-right"></i>dummy link</a>
-                </ul>
-            </headbar-menu>
-        </headbar-menus>
-    </headbar>
+    <sidebar class="page-sidebar">
+        <sidebar-module class="page-sidebar-module">
+            <sidebar-header>
+                <button class="sidebar-button sidebar-closebtn" onclick="SidebarToggle()">
+                    <i class="bx bx-chevron-left"></i>
+                </button>
+                <p>Categories</p>
+            </sidebar-header>
+            <submodule class="page-sidebar-submodule">
+                <a href="/Getting-Started/" target="_blank" rel="noopener noreferrer">Как да започнем да бачкаме?</a>
+                <a href="" target="_blank" rel="noopener noreferrer">Dummy</a>
+                <a href="" target="_blank" rel="noopener noreferrer">Dummy</a>
+                <a href="" target="_blank" rel="noopener noreferrer">Dummy</a>
+            </submodule>
+            <submodule class="page-sidebar-submodule">
+                <a href="/HTML/" target="_blank" rel="noopener noreferrer">Защо ХеТеМеЛе е смотан език</a>
+                <a href="" target="_blank" rel="noopener noreferrer">Dummy</a>
+                <a href="" target="_blank" rel="noopener noreferrer">Dummy</a>
+                <a href="" target="_blank" rel="noopener noreferrer">Dummy</a>
+            </submodule>
+            <submodule class="page-sidebar-submodule">
+                <a href="" target="_top" rel="noopener noreferrer">Dummy</a>
+                <a href="" target="_blank" rel="noopener noreferrer">Dummy</a>
+                <a href="" target="_blank" rel="noopener noreferrer">Dummy</a>
+                <a href="" target="_blank" rel="noopener noreferrer">Dummy</a>
+            </submodule>
+            <submodule class="page-sidebar-submodule">
+                <a href="/JavaScript/" target="_blank" rel="noopener noreferrer">А кой не мрази ДжаваСкрипт!</a>
+                <a href="" target="_blank" rel="noopener noreferrer">Dummy</a>
+                <a href="" target="_blank" rel="noopener noreferrer">Dummy</a>
+                <a href="" target="_blank" rel="noopener noreferrer">Dummy</a>
+            </submodule>
+        </sidebar-module>
+    </sidebar>
     <page>
         <content>
-            <top>
-                
-            </top>
+            <div class="site-top">
+                <p class="Homepage-Heading">WebStyle</p>
+                <p class="Homepage-Subheading">The one-stop place for all your Web development needs!</p>
+                <HomepageSearchbox>
+                    <input id="MainSearchEngineBox" type="search" placeholder="Search by topic or keywords">
+                    <button id="MainSearchEngineSubmit" type="submit" onclick="SearchEngineCmd()"><i class="bx bx-search-alt"></i></button>
+                </HomepageSearchbox>
+                <button id="ScrollDownButton" onclick="ScrollBtn_Categories()">
+                    <i id="ScrollDownButton-icon" class='bx bxs-chevron-down bx-fade-down'></i>
+                    <p id="ScrollDownButton-text">Or learn more about us and how we can help!</p>
+                </button>
+            </div>
+            <content-categories>
+                <subcategories>
+                    <category-block>
+                        <img id="Category-block-image" src="/Resources/Assets/Images/error.png" alt="Block Image">
+                        <p id="Category-block-text">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed dolore sequi praesentium accusamus iure. Ab nesciunt beatae veritatis dolorem quas similique. Cum enim itaque, aut vel eaque assumenda rerum atque!
+                        </p>
+                    </category-block>
+                    <category-block>
+                        <p id="Category-block-text">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed dolore sequi praesentium accusamus iure. Ab nesciunt beatae veritatis dolorem quas similique. Cum enim itaque, aut vel eaque assumenda rerum atque!
+                        </p>
+                        <img id="Category-block-image" src="/Resources/Assets/Images/error.png" alt="Block Image">
+                    </category-block>
+                </subcategories>
+                <subcategories>
+                    <category-block>
+                        <img id="Category-block-image" src="/Resources/Assets/Images/error.png" alt="Block Image">
+                        <p id="Category-block-text">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed dolore sequi praesentium accusamus iure. Ab nesciunt beatae veritatis dolorem quas similique. Cum enim itaque, aut vel eaque assumenda rerum atque!
+                        </p>
+                    </category-block>
+                    <category-block>
+                        <p id="Category-block-text">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed dolore sequi praesentium accusamus iure. Ab nesciunt beatae veritatis dolorem quas similique. Cum enim itaque, aut vel eaque assumenda rerum atque!
+                        </p>
+                        <img id="Category-block-image" src="/Resources/Assets/Images/error.png" alt="Block Image">
+                    </category-block>
+                </subcategories>
+                <subcategories>
+                    <category-block>
+                        <img id="Category-block-image" src="/Resources/Assets/Images/error.png" alt="Block Image">
+                        <p id="Category-block-text">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed dolore sequi praesentium accusamus iure. Ab nesciunt beatae veritatis dolorem quas similique. Cum enim itaque, aut vel eaque assumenda rerum atque!
+                        </p>
+                    </category-block>
+                    <category-block>
+                        <p id="Category-block-text">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed dolore sequi praesentium accusamus iure. Ab nesciunt beatae veritatis dolorem quas similique. Cum enim itaque, aut vel eaque assumenda rerum atque!
+                        </p>
+                        <img id="Category-block-image" src="/Resources/Assets/Images/error.png" alt="Block Image">
+                    </category-block>
+                </subcategories>
+            </content-categories>
+            <bullet-points>
+                <bullet>
+                    <i id="bullet-icon" class="bx bx-info-circle"></i>
+                    <p id="bullet-text">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias fugit dignissimos mollitia officiis consequatur, nemo qui vero, voluptas debitis tempora et beatae sit cum enim ipsam accusantium suscipit. Aspernatur, alias?
+                    </p>
+                </bullet>
+                <bullet>
+                    <i id="bullet-icon" class="bx bx-info-circle"></i>
+                    <p id="bullet-text">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias fugit dignissimos mollitia officiis consequatur, nemo qui vero, voluptas debitis tempora et beatae sit cum enim ipsam accusantium suscipit. Aspernatur, alias?
+                    </p>
+                </bullet>
+                <bullet>
+                    <i id="bullet-icon" class="bx bx-info-circle"></i>
+                    <p id="bullet-text">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias fugit dignissimos mollitia officiis consequatur, nemo qui vero, voluptas debitis tempora et beatae sit cum enim ipsam accusantium suscipit. Aspernatur, alias?
+                    </p>
+                </bullet>
+            </bullet-points>
         </content>
     </page>
 </body>
