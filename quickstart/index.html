@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--Page Information-->
+    <title>Getting Started with Web Development - WebStyle</title>
+    <meta name="description" content="Get the tools, get the hang of it and publish your first website! - Project WebStyle Official">
+    <meta name="keywords" content="Getting Started, QuickStart, Web Style">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Site Customization & Plugins-->
+    <link rel="shortcut icon" href="/Resources/Assets/Icons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/Resources/Assets/Icons/favicon.png">
+    <link rel="stylesheet" href="/Resources/CSS/Global.css">
+    <script src="/Resources/JavaScript/Global.js" defer></script>
+
+    <!--3rd party Dependencie2s-->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+    <link rel="stylesheet" href="/Resources/CSS/flickity.css">
+    <script src="/Resources/JavaScript/jquery.js"></script>
+    <script src="/Resources/JavaScript/flickity.pkgd.js"></script>
+</head>
+<body>
+    <header></header>
+    <!--<div id="UserHoverPopUp"></div>-->
+    <sidebar class="page-sidebar"></sidebar>
+    <page>
+        <content>
+            <div class="site-top">
+                <p class="TutorialPage-Heading">Getting Started</p>
+                <p class="TutorialPage-SubHeading">This guide will teach you how to setup your environment for Web Development, the tools you would need and guide you trough your first website.</p>
+            </div>
+            <tutorial-section class="active-section">
+                <tutorial-point>
+                    <p>Step 1: Choose your favourite IDE</p>
+                </tutorial-point>
+                <p class="tutorial-point-explanation">
+                    An Integrated Development Environment (IDE) is a software application that provides comprehensive facilities to computer programmers for software development.
+                    An IDE typically consists of a source code editor, build automation tools, and a debugger.
+                    It helps developers write, test, and debug their code more efficiently by offering features such as syntax highlighting, code completion, and version control integration.
+                    IDEs are essential tools in web development, allowing developers to streamline their workflow and manage their projects more effectively.
+                </p>
+                <div class="tutorial-categoryselector" id="GS-IDESel">
+                    <div class="IDE-Select" id="IDE-Eclipse" onclick="TutorialEcl()">
+                        <img class="IDE-Select-logo" src="../Resources/Assets/Images/products/EclipseIDE.svg" alt="">
+                        <div class="IDE-Select-content">
+                            <p class="IDE-Select-title">Eclipse</p>
+                            <p class="IDE-Select-subtitle">developed by Eclipse</p>
+                        </div>
+                        <div class="IDE-Select-backdrop"></div>
+                    </div>
+                    <div class="IDE-Select" id="IDE-JB" onclick="TutorialWS()">
+                        <img class="IDE-Select-logo" src="../Resources/Assets/Images/products/WebStorm.svg" alt="">
+                        <div class="IDE-Select-content">
+                            <p class="IDE-Select-title">WebStorm</p>
+                            <p class="IDE-Select-subtitle">developed by JetBrains</p>
+                        </div>
+                        <div class="IDE-Select-backdrop"></div>
+                    </div>
+                    <div class="IDE-Select" id="IDE-VSC" onclick="TutorialVSC()">
+                        <img class="IDE-Select-logo" src="../Resources/Assets/Images/products/vscode.svg" alt="">
+                        <div class="IDE-Select-content">
+                            <p class="IDE-Select-title">Visual Studio Code</p>
+                            <p class="IDE-Select-subtitle">developed by Microsoft</p>
+                        </div>
+                        <div class="IDE-Select-backdrop"></div>
+                    </div>
+                    <div class="IDE-Select" id="IDE-Sublime" onclick="TutorialSL()">
+                        <img class="IDE-Select-logo" src="../Resources/Assets/Images/products/Sublime.svg" alt="">
+                        <div class="IDE-Select-content">
+                            <p class="IDE-Select-title">Sublime Text</p>
+                            <p class="IDE-Select-subtitle">developed by Sublime</p>
+                        </div>
+                        <div class="IDE-Select-backdrop"></div>
+                    </div>
+                    <div class="IDE-Select" id="IDE-BGC" onclick="TutorialBGC()">
+                        <img class="IDE-Select-logo" src="../Resources/Assets/Images/products/griddycode.svg" alt="">
+                        <div class="IDE-Select-content">
+                            <p class="IDE-Select-title">Bussin GriddyCode</p>
+                            <p class="IDE-Select-subtitle">developed by Face Dev</p>
+                        </div>
+                        <div class="IDE-Select-backdrop"></div>
+                    </div>
+                </div>
+            </tutorial-section>
+            <tutorial-section id="IDE-Selected-Instructions">
+                <div class="tutorial-section-warning">
+                    <p><i class="bx bx-been-here"></i> To continue you need to first select a category from the section above!</p>
+                </div>
+            </tutorial-section>
+            
+        </content>
+    </page>
+</body>
+</html>

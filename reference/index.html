@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--Page Information-->
+    <title>Referencing elements - WebStyle</title>
+    <meta name="description" content="Start working on your big web project! - Project WebStyle Official">
+    <meta name="keywords" content="Getting Started, QuickStart, Web Style">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Site Customization & Plugins-->
+    <link rel="shortcut icon" href="/Resources/Assets/Icons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/Resources/Assets/Icons/favicon.png">
+    <link rel="stylesheet" href="/Resources/CSS/Global.css">
+    <script src="/Resources/JavaScript/Global.js" defer></script>
+
+    <!--3rd party Dependencie2s-->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+    <link rel="stylesheet" href="/Resources/CSS/flickity.css">
+    <script src="/Resources/JavaScript/jquery.js"></script>
+    <script src="/Resources/JavaScript/flickity.pkgd.js"></script>
+</head>
+
+<body>
+    <header></header>
+    <!--<div id="UserHoverPopUp"></div>-->
+    <sidebar class="page-sidebar"></sidebar>
+    <page>
+        <content>
+            <div class="site-top">
+                <p class="TutorialPage-Heading">Using CSS and JavaScript</p>
+                <p class="TutorialPage-SubHeading">This guide is about using and applying styles and functions to your
+                    static or dynamic webpage.</p>
+            </div>
+            <tutorial-section>
+                <tutorial-point>
+                    <p>How can we attach CSS to elements?</p>
+                </tutorial-point>
+                <p class="tutorial-point-explanation">
+                    <tutorial-point>
+                        <p>Method 1. - Inline CSS</p>
+                    </tutorial-point>
+                    Inline CSS is applied directly to HTML elements using the style attribute.
+                    <br>Code:
+                    <br><br>
+                    <xmp>
+                        <p style="font-size: 18px; color: #ff00ff; letter-spacing: 2px;">Hello world!</p>
+                    </xmp>
+                    <br>Output:
+                <p style="font-size: 18px; color: #ff00ff; letter-spacing: 2px;">Hello world!</p>
+                </p>
+                <p class="tutorial-point-explanation">
+                    <tutorial-point>
+                        <p>Method 2. - Internal CSS</p>
+                    </tutorial-point>
+                    Internal CSS is defined within the 'style' tag in the head section of an HTML document. This method
+                    is useful for styling a single document.
+                    <br>Code:
+                    <br><br>
+                    <xmp>
+
+                        <head>
+                            <style>
+                                #demo-p {
+                                    font-size: 18px;
+                                    color: #ff00ff;
+                                    letter-spacing: 2px;
+                                }
+                            </style>
+                        </head>
+
+                        <p id="demo-p">Hello world!</p>
+                    </xmp>
+                    <br>Output:
+                <p style="font-size: 18px; color: #ff00ff; letter-spacing: 2px;">Hello world!</p>
+                </p>
+                <p class="tutorial-point-explanation">
+                    <tutorial-point>
+                        <p>Method 3. - External CSS</p>
+                    </tutorial-point>
+                    External CSS is linked to an HTML document using the link tag. This method is ideal for applying
+                    styles across multiple pages.
+                    <br>Code:
+                    <br><br>
+                    <xmp>
+
+                        <head>
+                            <link rel="stylesheet" href="style.css">
+                        </head>
+
+                        <p id="demo-p">Hello world!</p>
+                    </xmp>
+                    <xmp>
+                        <!--Inside style.css-->
+
+                        #demo-p {
+                            font-size: 18px;
+                            color: #ff00ff;
+                            letter-spacing: 2px;
+                        }
+                    </xmp>
+                    <br>Output:
+                <p style="font-size: 18px; color: #ff00ff; letter-spacing: 2px;">Hello world!</p>
+                </p>
+            </tutorial-section>
+            <tutorial-section>
+                <tutorial-point>
+                    <p>How can we attach JavaScript listeners to elements?</p>
+                </tutorial-point>
+                <p class="tutorial-point-explanation">
+                    <tutorial-point>
+                        <p>Method 1. - Inline functions</p>
+                    </tutorial-point>
+                    Inline JavaScript is added directly to HTML elements using event attributes like onclick, onload, onmouseout, etc.
+                    <br>Code:
+                    <br><br>
+                    <xmp>
+                        <button style="background-color: aqua; font-size: 16px;" onclick="alert('Button pressed!')">Press me!</button>
+                    </xmp>
+                    <br>Output:
+                    <button style="background-color: aqua; font-size: 16px; width: fit-content;" onclick="alert('Button pressed!')">Press me!</button>
+                </p>
+                <p class="tutorial-point-explanation">
+                    <tutorial-point>
+                        <p>Method 2. - Internal functions</p>
+                    </tutorial-point>
+                    Internal JavaScript is placed within the 'script' tag in the head or at the end of the body section.
+                    <br>Code:
+                    <br><br>
+                    <xmp>
+
+                        <head>
+                            <script>
+                                function showMessage() {
+                                    alert('Button pressed!');
+                                }
+                            </script>
+                        </head>
+
+                        <button style="background-color: aqua; font-size: 16px;" onclick="showMessage()">Press me!</button>
+                    </xmp>
+                    <br>Output:
+                    <button style="background-color: aqua; font-size: 16px; width: fit-content;" onclick="alert('Button pressed!')">Press me!</button>
+                </p>
+                <p class="tutorial-point-explanation">
+                    <tutorial-point>
+                        <p>Method 3. - External functions</p>
+                    </tutorial-point>
+                    External JavaScript is linked to an HTML document using the 'script' tag with the src attribute. This is useful for
+                    reusing scripts across multiple pages. <br> You can use the attribute 'defer' at the end to specify loading the file after
+                    all DOM elements are loaded to avoid the script running before page load and prevent syntax errors.
+                    <br>Code:
+                    <br><br>
+                    <xmp>
+
+                        <head>
+                            <script src="functions.js" defer></script>
+                        </head>
+
+                        <button style="background-color: aqua; font-size: 16px;" onclick="showMessage()">Press me!</button>
+                    </xmp>
+                    <xmp>
+                        <!--Inside functions.js-->
+                        
+                        function showMessage() {
+                            alert('Button pressed!');
+                        }
+                    </xmp>
+                    <br>Output:
+                    <button style="background-color: aqua; font-size: 16px; width: fit-content;" onclick="alert('Button pressed!')">Press me!</button>
+                </p>
+            </tutorial-section>
+            
+        </content>
+    </page>
+</body>
+</html>

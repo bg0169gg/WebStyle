@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebStyle-TutorialPages>
+    <page>
+        <title>QuickStart™ Guide</title>
+        <url>/quickstart/</url>
+        <keywords>*, getting, get, start, started, starting, tutorial, begin, learn, ide</keywords>
+    </page>
+    <page>
+        <title>QuickStart™ HTML Guide</title>
+        <url>/quickstart/html.html</url>
+        <keywords>*, , getting, get, start, started, starting, tutorial, begin, learn, html, webview, iframe</keywords>
+    </page>
+    <page>
+        <title>QuickStart™ CSS Guide</title>
+        <url>/quickstart/css.html</url>
+        <keywords>*, getting, get, start, started, starting, tutorial, begin, learn, css, animation, transition, personaliz, customiz, dynamic, interact</keywords>
+    </page>
+    <page>
+        <title>QuickStart™ JavaScript Guide</title>
+        <url>/quickstart/js.html</url>
+        <keywords>*, getting, get, start, started, starting, tutorial, begin, learn, js, javascript, script, function, dynamic, logic, api, interact</keywords>
+    </page>
+    <page>
+        <title>QuickStart™ Previewing your website</title>
+        <url>/quickstart/localhost.html</url>
+        <keywords>*, getting, get, start, started, starting, tutorial, begin, learn, html, chrome, firefox, safari, view, live, server, preview</keywords>
+    </page>
+    <page>
+        <title>Templates &amp; previews</title>
+        <url>/demos/</url>
+        <keywords>*, getting, get, start, started, starting, tutorial, begin, learn, html, chrome, firefox, safari, view, live, server, preview, template, plate, view, demo</keywords>
+    </page>
+    <page>
+        <title>Referencing CSS and JavaScript</title>
+        <url>/reference/</url>
+        <keywords>*, tutorial, learn, refer, reference, css, js, javascript, elements, attribute, function, attributes, functions, html, elements, attach, call</keywords>
+    </page>
+    <page>
+        <title>Pushing and hosting on GitHub</title>
+        <url>/web/github.html</url>
+        <keywords>*, tutorial, begin, learn, html, chrome, firefox, safari, view, live, server, preview, git, github, domain, host, hosting, repo, repository, web, internet</keywords>
+    </page>
+</WebStyle-TutorialPages>

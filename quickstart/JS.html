@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--Page Information-->
+    <title>What is JavaScript - WebStyle</title>
+    <meta name="description"
+        content="Get the tools, get the hang of it and publish your first website! - Project WebStyle Official">
+    <meta name="keywords" content="Getting Started, QuickStart, Web Style">
+    <meta name="WebStyle-SearchTopic" content="Getting started, Start, Welcome, ">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Site Customization & Plugins-->
+    <link rel="shortcut icon" href="/Resources/Assets/Icons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/Resources/Assets/Icons/favicon.png">
+    <link rel="stylesheet" href="/Resources/CSS/Global.css">
+    <script src="/Resources/JavaScript/Global.js" defer></script>
+
+    <!--3rd party Dependencie2s-->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+    <link rel="stylesheet" href="/Resources/CSS/flickity.css">
+    <script src="/Resources/JavaScript/jquery.js"></script>
+    <script src="/Resources/JavaScript/flickity.pkgd.js"></script>
+</head>
+
+<body>
+    <header></header>
+    <!--<div id="UserHoverPopUp"></div>-->
+    <sidebar class="page-sidebar"></sidebar>
+    <page>
+        <content>
+            <div class="site-top">
+                <p class="TutorialPage-Heading">JavaScript</p>
+                <p class="TutorialPage-SubHeading">Learn about JavaScript, its applications, quick function engine,
+                    practic commands and frameworks.</p>
+            </div>
+            <tutorial-section>
+                <tutorial-point>
+                    <p>What does JavaScript mean and how is it used on the web?</p>
+                </tutorial-point>
+                <p class="tutorial-point-explanation">JavaScript is a versatile programming language used primarily for
+                    creating interactive and dynamic content on the web. It runs in web browsers, allowing developers to
+                    enhance web pages by manipulating the DOM, handling events, and
+                    communicating asynchronously with servers. JavaScript enables functionalities such as form
+                    validation, interactive maps, animations, and real-time updates without reloading the page. It is
+                    essential for building modern web applications that provide a responsive and engaging user
+                    experience, integrating seamlessly with HTML and CSS to create dynamic and interactive web pages.
+                </p>
+                <content-categories>
+                    <category-block>
+                        <img id="Category-block-image" src="/Resources/Assets/Images/error.png" alt="Block Image">
+                        <p class="Category-block-text">
+                            <span id="Category-block-text">Interactivity and manipulation</span>
+                            JavaScript allows developers to create interactive elements on a webpage, such as sliders,
+                            forms, and games, responding to user actions like clicks, hovers, and keypresses, and can
+                            directly manipulate the DOM, enabling real-time updates to the content and structure of a
+                            webpage without requiring a page reload.
+                        </p>
+                    </category-block>
+                    <category-block>
+                        <p class="Category-block-text">
+                            <span id="Category-block-text">Event handling</span>
+                            JavaScript can listen for and handle events, making it possible to execute code in response
+                            to
+                            user interactions or other occurrences, such as loading a webpage or submitting a form,
+                            commonly
+                            used for client-side validation of form inputs, ensuring that data entered by users meets
+                            specified criteria before it is submitted to the server.
+                        </p>
+                        <img id="Category-block-image" src="/Resources/Assets/Images/error.png" alt="Block Image">
+                    </category-block>
+                    <category-block>
+                        <img id="Category-block-image" src="/Resources/Assets/Images/error.png" alt="Block Image">
+                        <p class="Category-block-text">
+                            <span id="Category-block-text">Client-to-server communication</span>
+                            JavaScript enables asynchronous communication with a server using Asynchronous JavaScript
+                            and
+                            XML (AJAX), Fetch API or RestAPI, allowing webpages to update dynamically with new data
+                            without
+                            reloading the page.
+                        </p>
+                    </category-block>
+                    <category-block>
+                        <p class="Category-block-text">
+                            <span id="Category-block-text">Development and Extensibility</span>
+                            JavaScript can be extended with various plugins and modules, enabling developers to add
+                            specialized functionality and integrate with other technologies and services, with a vast
+                            ecosystem of libraries and frameworks (like React, Angular, and Vue.js) that streamline and
+                            enhance web development. It can be used for
+                            server-side programming, making it possible to write both client-side
+                            and server-side code in the same language. Additionally, frameworks like React Native allow
+                            for
+                            mobile app development using JavaScript.
+                        </p>
+                        <img id="Category-block-image" src="/Resources/Assets/Images/error.png" alt="Block Image">
+                    </category-block>
+                </content-categories>
+            </tutorial-section>
+            <tutorial-section>
+                <tutorial-point>
+                    <p>How does JavaScript work and how do we integrate it in our website?</p>
+                </tutorial-point>
+                <p class="tutorial-point-explanation">
+                    JavaScript runs in a web browser's engine, which reads and executes commands line by line. To
+                    optimize JavaScript code, we can minimize the use of global variables, reduce DOM manipulations, use
+                    efficient loops, and implement asynchronous programming to prevent blocking operations. It
+                    is connected to HTML by placing script tags either within the HTML document, usually at the end of
+                    the body section for better performance, or by linking to external JavaScript files using the 'src'
+                    attribute. Functions in JavaScript are invoked by calling their name followed by parentheses,
+                    optionally passing arguments within the parentheses if the function requires them. This allows the
+                    defined actions within the functions to be executed at specific times or events.
+                </p>
+            </tutorial-section>
+            <content-categories>
+                <category-block>
+                    <p class="Category-block-text"><span id="Category-block-text">Preview JavaScript changes in real
+                            time</span>Powered by QuickStart™ ViewEngine</p>
+                    <QS-viewengine class="Category-block-QSVE QS-engineviewport JS-Viewport">
+                        <link rel="stylesheet" href="/QuickStart/ViewEngine.css">
+                        <script>
+                            function QSVE_ToggleViewEngineComponent() {
+                                $("#democontainer").append("<p class='demotext-autogen'>Hello again!</p>");
+                            };
+                            function QSVE_ResetViewEngine() {
+                                $(".demotext-autogen").remove();
+                            };
+                        </script>
+                        <span class="QSVE-ControlPanel"></span>
+                        <p id="demotext">Hello world!</p>
+                        <ul id="demolist">
+                            <li>Bullet point</li>
+                            <li>Another bullet point</li>
+                        </ul>
+                        <div id="democontainer"></div>
+                        <img id="demoicon" src="/Resources/Assets/Images/developers/microsoft.png" alt="microsoft logo">
+                    </QS-viewengine>
+                </category-block>
+            </content-categories>
+        </content>
+    </page>
+</body>
+
+</html>

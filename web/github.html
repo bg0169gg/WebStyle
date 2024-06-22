@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--Page Information-->
+    <title>Pushing and hosting on GitHub - WebStyle</title>
+    <meta name="description" content="Project WebStyle Official">
+    <meta name="keywords" content="CSS, Web, Internet, HTML, JS, JavaScript, Customize, Style, Personalize, Animation">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Site Customization & Plugins-->
+    <link rel="shortcut icon" href="/Resources/Assets/Icons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/Resources/Assets/Icons/favicon.png">
+    <link rel="stylesheet" href="/Resources/CSS/Global.css">
+    <script src="/Resources/JavaScript/Global.js" defer></script>
+
+    <!--3rd party Dependencie2s-->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+    <link rel="stylesheet" href="/Resources/CSS/flickity.css">
+    <script src="/Resources/JavaScript/jquery.js"></script>
+    <script src="/Resources/JavaScript/flickity.pkgd.js"></script>
+</head>
+<body>
+    <header></header>
+    <sidebar class="page-sidebar"></sidebar>
+    <page>
+        <content>
+            <div class="site-top">
+                <i class="bx bxl-github" style="font-size: 128px;"></i>
+                <p class="TutorialPage-Heading" >GitHub</p>
+                <p class="TutorialPage-SubHeading">This guide will teach you how to setup your environment for Web Development, the tools you would need and guide you trough your first website.</p>
+            </div>
+            <tutorial-section>
+                <tutorial-point>
+                    <p>First, what is Git and GitHub?</p>
+                </tutorial-point>
+                <p class="tutorial-point-explanation">
+                    Git is a version control system used to track changes in code and collaborate with others on software development
+                    projects. GitHub is a cloud-based platform owned by Microsoft that hosts Git repositories, providing tools for
+                    version control,
+                    collaboration, and project management. Git is used for managing code versions and maintaining a history of changes,
+                    while GitHub facilitates sharing, reviewing, and collaborating on code with others, making it easier for developers
+                    to work together on projects.
+                </p>
+            </tutorial-section>
+            <tutorial-section>
+                <tutorial-point>
+                    <p>Why should you use GitHub to host your web project?</p>
+                </tutorial-point>
+                <p class="tutorial-point-explanation">
+                    GitHub offers free hosting for static websites through GitHub Pages, making it a convenient and reliable platform
+                    for saving, managing and hosting your website project, while providing version control, enabling easy
+                    tracking of changes and collaboration with other people or colleagues.
+                </p>
+            </tutorial-section>
+            <content-categories>
+                <category-block>
+                <tutorial-point>
+                    <p>How to push your web project on GitHub and set up web hosting?</p>
+                </tutorial-point>
+                    <p class="Category-block-text">
+                        <span id="Category-block-text">Step 1. Getting required software</span>
+                        <span>
+                            Because of its simple UI/UX, we recommend you use GitHub Desktop (Windows, macOS) for managing Git repositories
+                            locally and on the
+                            web. You can download it from the <a href="https://desktop.github.com/">official GitHub website</a>, or if you
+                            prefer terminal-based work, you can install the
+                            <a href="https://git.org">official Git client</a> (Windows, macOS, Linux), allowing you to manage your repositories from Visual Studio code.
+                        </span>
+                        <br>
+                        <span>
+                            After installing GitHub Desktop, log in and configure your profile settings.
+                            If you choose Git, you would need to set your name and your GitHub's email by using:
+                        </span>
+                        <br>
+                        <code>git config --global user.name "Your Name"</code>
+                        <code>git config --global user.email "your_email@example.com"</code>
+                        <br>
+                        <span>If you want to learn how to create, clone, pull, fetch and push repositories, read the official Git documentation and instructions.</span>
+                    </p>
+                    <img id="Category-block-image" src="/Resources/Assets/Images/Demo/creategitrepo/samplerepo.png" alt="Block Image">
+                </category-block>
+                <category-block>
+                    <p class="Category-block-text">
+                        <span id="Category-block-text">Step 2. Create a new repository and push your files into it</span>
+                        <span>
+                            From the top left corner of the titlebar select the File menu and click on 'New repository'. Make a name, preferably
+                            the title of your project, description and location of the local folder. If you plan for people to see, and make
+                            copies of your repository, check 'Initialize with README' and select a license that fits your requirements, by
+                            helping yourself with the open-source license page <a href="https://choosealicense.com">choosealicense.com</a>.
+                        </span>
+                        <br>
+                        <span>Note: Git ignore is a simple file that defines local files and folders which shall not be tracked and uploaded
+                            (ignored). If you recognize any of your editorsor languages which you use, select it. Otherwise, leave it blank, as
+                            it may interfeer with your file configuration.
+                        </span>
+                        <br>
+                        <span>
+                            After the repository has been created, click on the undo button at the bottom of the sidebar, to undo the default initial commit. 
+                            Then click on Reveal in File Explorer/Finder (file manager depends on the
+                            OS you use). If you have started working on your project, copy the files inside the folder, otherwise make a new
+                            file structure
+                            as you like. Note that Git does not track and upload empty folders, so dont be confused that you doont see your
+                            folder if its empty. This is also the perfect time to take a look at that README.md file and fill it with simple info, as name, description,
+                            used libraries, contributions and credits.
+                        </span>
+                        <br>
+                        <span>
+                            After you're done with your files, look at the bottom of GitHub Desktop's sidebar. As the summary, you can put
+                            something like 'Initial commit', or 'First push', the description as you like, and before clicking commit, take a
+                            look if all of your files/folders are in the treeview above. If everything is right, commit, wait for it to save the
+                            configuration, and you're done!
+                        </span>
+                    </p>
+                    <img id="Category-block-image" src="/Resources/Assets/Images/Demo/creategitrepo/democommit.png" alt="Block Image">
+                </category-block>
+                <category-block>
+                    <p class="Category-block-text">
+                        <span id="Category-block-text">Step 3. Publish repository and set up webhost</span>
+                        <span>
+                            After commiting you should see the repo's home screen. Click on the blue 'Publish to GitHub' button and follow the steps, deselecting 'keep private', so others can view it and see the website. After it uploads successfully, click on 'Show in Github', click on Settings from the top navbar and go to Pages. From there, under branch, select your main branch (main, master, etc.), select the root of the page (usually just /root) and click save.
+                        </span>
+                        <br>
+                        <span>
+                            From now on, you can find your project on *your_username*.github.io/*your_repo_name*
+                        </span>
+                    </p>
+                    <img id="Category-block-image" src="/Resources/Assets/Images/Demo/creategitrepo/demorepo-web.png" alt="Block Image">
+                </category-block>
+                <tutorial-point>
+                    <p>That's it! From now on after every push you should be able to view your site on your repository's domain.</p>
+                </tutorial-point>
+            </content-categories>
+        </content>
+    </page>
+</body>
+</html>

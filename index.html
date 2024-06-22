@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!--Page Information-->
     <title>WebStyle - Create Stylish CSS quickly and with ease</title>
-    <meta name="description" content="Official homepage for project WebStyle - a website for creating paste-and-go CSS and JS for your Web project">
+    <meta name="description"
+        content="Official homepage for project WebStyle - a website for creating paste-and-go CSS and JS for your Web project">
     <meta name="keywords" content="CSS, Web, Internet, HTML, JS, JavaScript, Customize, Style, Personalize, Animation">
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -21,146 +23,112 @@
     <script src="/Resources/JavaScript/jquery.js"></script>
     <script src="/Resources/JavaScript/flickity.pkgd.js"></script>
 </head>
+
 <body class="homepage-body">
-    <header>
-        <header-left>
-            <div class="header-sidebar-toggle">
-                <button class="header-button" onclick="SidebarToggle()">
-                    <i class='bx bx-menu-alt-left'></i>
-                </button>
-            </div>
-            <div class="header-title">
-                <a href="" target="_parent" id="header-title">
-                    WebStyle
-                </a>
-            </div>
-        </header-left>
-        <header-right>
-            <HeaderSearchbox>
-                <input id="MainSearchEngineBox" type="search" placeholder="Search by topic or keywords">
-                <button id="MainSearchEngineSubmit" type="submit" onclick="SearchEngineCmd()"><i class="bx bx-search-alt"></i></button>
-            </HeaderSearchbox>
-            <div class="header-user">
-                <a class="header-button" href="/user/">
-                    <i class='bx bx-user-circle'></i>
-                </a>
-            </div>
-        </header-right>
-    </header>
-    <div id="UserHoverPopUp"></div>
-    <sidebar class="page-sidebar">
-        <sidebar-module class="page-sidebar-module">
-            <sidebar-header>
-                <button class="sidebar-button sidebar-closebtn" onclick="SidebarToggle()">
-                    <i class="bx bx-chevron-left"></i>
-                </button>
-                <p>Categories</p>
-            </sidebar-header>
-            <submodule class="page-sidebar-submodule">
-                <a href="/Getting-Started/" target="_blank" rel="noopener noreferrer">Как да започнем да бачкаме?</a>
-                <a href="" target="_blank" rel="noopener noreferrer">Dummy</a>
-                <a href="" target="_blank" rel="noopener noreferrer">Dummy</a>
-                <a href="" target="_blank" rel="noopener noreferrer">Dummy</a>
-            </submodule>
-            <submodule class="page-sidebar-submodule">
-                <a href="/HTML/" target="_blank" rel="noopener noreferrer">Защо ХеТеМеЛе е смотан език</a>
-                <a href="" target="_blank" rel="noopener noreferrer">Dummy</a>
-                <a href="" target="_blank" rel="noopener noreferrer">Dummy</a>
-                <a href="" target="_blank" rel="noopener noreferrer">Dummy</a>
-            </submodule>
-            <submodule class="page-sidebar-submodule">
-                <a href="" target="_top" rel="noopener noreferrer">Dummy</a>
-                <a href="" target="_blank" rel="noopener noreferrer">Dummy</a>
-                <a href="" target="_blank" rel="noopener noreferrer">Dummy</a>
-                <a href="" target="_blank" rel="noopener noreferrer">Dummy</a>
-            </submodule>
-            <submodule class="page-sidebar-submodule">
-                <a href="/JavaScript/" target="_blank" rel="noopener noreferrer">А кой не мрази ДжаваСкрипт!</a>
-                <a href="" target="_blank" rel="noopener noreferrer">Dummy</a>
-                <a href="" target="_blank" rel="noopener noreferrer">Dummy</a>
-                <a href="" target="_blank" rel="noopener noreferrer">Dummy</a>
-            </submodule>
-        </sidebar-module>
-    </sidebar>
+    <header></header>
+    <sidebar class="page-sidebar"></sidebar>
     <page>
         <content>
             <div class="site-top">
                 <p class="Homepage-Heading">WebStyle</p>
                 <p class="Homepage-Subheading">The one-stop place for all your Web development needs!</p>
-                <HomepageSearchbox>
-                    <input id="MainSearchEngineBox" type="search" placeholder="Search by topic or keywords">
-                    <button id="MainSearchEngineSubmit" type="submit" onclick="SearchEngineCmd()"><i class="bx bx-search-alt"></i></button>
-                </HomepageSearchbox>
-                <button id="ScrollDownButton" onclick="ScrollBtn_Categories()">
-                    <i id="ScrollDownButton-icon" class='bx bxs-chevron-down bx-fade-down'></i>
-                    <p id="ScrollDownButton-text">Or learn more about us and how we can help!</p>
-                </button>
+                <HomeSearchRoot>
+                    <HomepageSearchbox>
+                        <input id="MainSearchEngineBox" type="search" placeholder="Search by topic or keywords" oninput="SearchEngineCmd()">
+                        <button id="MainSearchEngineSubmit" type="submit" onclick="SearchEngineCmd()"><i
+                                class="bx bx-search-alt"></i></button>
+                    </HomepageSearchbox>
+                    <SearchResultsRoot class="homepage"></SearchResultsRoot>
+                </HomeSearchRoot>
             </div>
             <content-categories>
-                <subcategories>
-                    <category-block>
-                        <img id="Category-block-image" src="/Resources/Assets/Images/error.png" alt="Block Image">
-                        <p id="Category-block-text">
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed dolore sequi praesentium accusamus iure. Ab nesciunt beatae veritatis dolorem quas similique. Cum enim itaque, aut vel eaque assumenda rerum atque!
-                        </p>
-                    </category-block>
-                    <category-block>
-                        <p id="Category-block-text">
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed dolore sequi praesentium accusamus iure. Ab nesciunt beatae veritatis dolorem quas similique. Cum enim itaque, aut vel eaque assumenda rerum atque!
-                        </p>
-                        <img id="Category-block-image" src="/Resources/Assets/Images/error.png" alt="Block Image">
-                    </category-block>
-                </subcategories>
-                <subcategories>
-                    <category-block>
-                        <img id="Category-block-image" src="/Resources/Assets/Images/error.png" alt="Block Image">
-                        <p id="Category-block-text">
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed dolore sequi praesentium accusamus iure. Ab nesciunt beatae veritatis dolorem quas similique. Cum enim itaque, aut vel eaque assumenda rerum atque!
-                        </p>
-                    </category-block>
-                    <category-block>
-                        <p id="Category-block-text">
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed dolore sequi praesentium accusamus iure. Ab nesciunt beatae veritatis dolorem quas similique. Cum enim itaque, aut vel eaque assumenda rerum atque!
-                        </p>
-                        <img id="Category-block-image" src="/Resources/Assets/Images/error.png" alt="Block Image">
-                    </category-block>
-                </subcategories>
-                <subcategories>
-                    <category-block>
-                        <img id="Category-block-image" src="/Resources/Assets/Images/error.png" alt="Block Image">
-                        <p id="Category-block-text">
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed dolore sequi praesentium accusamus iure. Ab nesciunt beatae veritatis dolorem quas similique. Cum enim itaque, aut vel eaque assumenda rerum atque!
-                        </p>
-                    </category-block>
-                    <category-block>
-                        <p id="Category-block-text">
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed dolore sequi praesentium accusamus iure. Ab nesciunt beatae veritatis dolorem quas similique. Cum enim itaque, aut vel eaque assumenda rerum atque!
-                        </p>
-                        <img id="Category-block-image" src="/Resources/Assets/Images/error.png" alt="Block Image">
-                    </category-block>
-                </subcategories>
+                <category-block>
+                    <img id="Category-block-image" src="/Resources/Assets/Images/error.png" alt="Block Image">
+                    <p class="Category-block-text">
+                        <span id="Category-block-text">Kim Mehead</span>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed dolore sequi praesentium accusamus
+                        iure. Ab nesciunt beatae veritatis dolorem quas similique. Cum enim itaque, aut vel eaque
+                        assumenda rerum atque!
+                    </p>
+                </category-block>
+                <category-block>
+                    <p class="Category-block-text">
+                        <span id="Category-block-text">Ben Dover</span>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed dolore sequi praesentium accusamus
+                        iure. Ab nesciunt beatae veritatis dolorem quas similique. Cum enim itaque, aut vel eaque
+                        assumenda rerum atque!
+                    </p>
+                    <img id="Category-block-image" src="/Resources/Assets/Images/error.png" alt="Block Image">
+                </category-block>
+                <category-block>
+                    <img id="Category-block-image" src="/Resources/Assets/Images/error.png" alt="Block Image">
+                    <p class="Category-block-text">
+                        <span id="Category-block-text">Moe Lester</span>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed dolore sequi praesentium accusamus
+                        iure. Ab nesciunt beatae veritatis dolorem quas similique. Cum enim itaque, aut vel eaque
+                        assumenda rerum atque!
+                    </p>
+                </category-block>
+                <category-block>
+                    <p class="Category-block-text">
+                        <span id="Category-block-text">Nick Kher</span>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed dolore sequi praesentium accusamus
+                        iure. Ab nesciunt beatae veritatis dolorem quas similique. Cum enim itaque, aut vel eaque
+                        assumenda rerum atque!
+                    </p>
+                    <img id="Category-block-image" src="/Resources/Assets/Images/error.png" alt="Block Image">
+                </category-block>
+                <category-block>
+                    <img id="Category-block-image" src="/Resources/Assets/Images/error.png" alt="Block Image">
+                    <p class="Category-block-text">
+                        <span id="Category-block-text">Mike Oxmaul</span>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed dolore sequi praesentium accusamus
+                        iure. Ab nesciunt beatae veritatis dolorem quas similique. Cum enim itaque, aut vel eaque
+                        assumenda rerum atque!
+                    </p>
+                </category-block>
+                <category-block>
+                    <p class="Category-block-text">
+                        <span id="Category-block-text">Nick Ghas</span>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed dolore sequi praesentium accusamus
+                        iure. Ab nesciunt beatae veritatis dolorem quas similique. Cum enim itaque, aut vel eaque
+                        assumenda rerum atque!
+                    </p>
+                    <img id="Category-block-image" src="/Resources/Assets/Images/error.png" alt="Block Image">
+                </category-block>
             </content-categories>
             <bullet-points>
                 <bullet>
                     <i id="bullet-icon" class="bx bx-info-circle"></i>
                     <p id="bullet-text">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias fugit dignissimos mollitia officiis consequatur, nemo qui vero, voluptas debitis tempora et beatae sit cum enim ipsam accusantium suscipit. Aspernatur, alias?
+                        <span id="Category-block-text">Joe Swanson</span><br>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias fugit dignissimos mollitia
+                        officiis consequatur, nemo qui vero, voluptas debitis tempora et beatae sit cum enim ipsam
+                        accusantium suscipit. Aspernatur, alias?
                     </p>
                 </bullet>
                 <bullet>
                     <i id="bullet-icon" class="bx bx-info-circle"></i>
                     <p id="bullet-text">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias fugit dignissimos mollitia officiis consequatur, nemo qui vero, voluptas debitis tempora et beatae sit cum enim ipsam accusantium suscipit. Aspernatur, alias?
+                        <span id="Category-block-text">Ree Pist</span><br>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias fugit dignissimos mollitia
+                        officiis consequatur, nemo qui vero, voluptas debitis tempora et beatae sit cum enim ipsam
+                        accusantium suscipit. Aspernatur, alias?
                     </p>
                 </bullet>
                 <bullet>
                     <i id="bullet-icon" class="bx bx-info-circle"></i>
                     <p id="bullet-text">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias fugit dignissimos mollitia officiis consequatur, nemo qui vero, voluptas debitis tempora et beatae sit cum enim ipsam accusantium suscipit. Aspernatur, alias?
+                        <span id="Category-block-text">Joe Mama</span><br>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias fugit dignissimos mollitia
+                        officiis consequatur, nemo qui vero, voluptas debitis tempora et beatae sit cum enim ipsam
+                        accusantium suscipit. Aspernatur, alias?
                     </p>
                 </bullet>
             </bullet-points>
         </content>
     </page>
+    <footer></footer>
 </body>
+
 </html>

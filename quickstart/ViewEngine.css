@@ -1,0 +1,80 @@
+QS-viewengine {
+    width: fit-content;
+    height: fit-content;
+    padding: 20px;
+    border: 2px solid white;
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    -ms-flex-direction: column;
+    flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+}
+.frameview-halfscreenheight {
+    height: 55vh;
+}
+.QSVE-ControlPanel {
+    width: 35%;
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: row;
+    -ms-flex-direction: row;
+    flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    justify-content: space-evenly;
+}
+.QSVE-ToggleBtn {
+    width: fit-content;
+    height: fit-content;
+    padding: 5px;
+    font-size: 16px;
+    font-weight: 400;
+    color: black;
+    background-color: #eaeaea;
+    border-radius: 8px;
+}
+.demotext-autogen,
+#demotext {
+    font-size: 16px;
+    font-weight: 600;
+}
+#demolist {
+    font-size: 19px;
+    font-weight: 700;
+}
+#democontainer {
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: row;
+    -ms-flex-direction: row;
+    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+}
+#demoicon {
+    width: 15%;
+}
+.demotext-v2 {
+    font-size: 22px;
+    font-weight: 300;
+    color: rebeccapurple;
+    text-shadow: 2px 2px 2px white;
+}
+.demolist-v2 {
+    font-size: 17px;
+    font-weight: 400;
+    color: aqua;
+}
+.demoicon-v2 {
+    width: 20%;
+    filter: blur(4px);
+    -webkit-filter: blur(4px);
+}
+
+/* QuickStart™ ViewEngine Frame style */
+
+QS-viewengine-frame iframe {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #00fffe;
+    border-radius: 12px;
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--Page Information-->
+    <title>Previewing your site - WebStyle</title>
+    <meta name="description" content="Get the tools, get the hang of it and publish your first website! - Project WebStyle Official">
+    <meta name="keywords" content="Getting Started, QuickStart, Web Style">
+    <meta name="WebStyle-SearchTopic" content="Getting started, Start, Welcome, ">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Site Customization & Plugins-->
+    <link rel="shortcut icon" href="/Resources/Assets/Icons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/Resources/Assets/Icons/favicon.png">
+    <link rel="stylesheet" href="/Resources/CSS/Global.css">
+    <script src="/Resources/JavaScript/Global.js" defer></script>
+
+    <!--3rd party Dependencie2s-->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+    <link rel="stylesheet" href="/Resources/CSS/flickity.css">
+    <script src="/Resources/JavaScript/jquery.js"></script>
+    <script src="/Resources/JavaScript/flickity.pkgd.js"></script>
+</head>
+
+<body>
+    <header></header>
+    <!--<div id="UserHoverPopUp"></div>-->
+    <sidebar class="page-sidebar"></sidebar>
+    <page>
+        <content>
+            <div class="site-top">
+                <p class="TutorialPage-Heading">Localhost Preview</p>
+                <p class="TutorialPage-SubHeading">See the easiest ways to preview, interact with and test your site in the browser.</p>
+            </div>
+            <tutorial-section class="active-section">
+                <tutorial-point>
+                    <p>Choose how you would like to preview your websites:</p>
+                </tutorial-point>
+                <div class="extensions-categoryselector" id="GS-XtnSel">
+                    <div class="Xtn-Select" id="Xtn-LiveServerVSC" onclick="XtnInstall_VSC()">
+                        <img class="Xtn-Select-logo" src="/Resources/Assets/Images/extensions/LiveServer.svg" alt="">
+                        <div class="Xtn-Select-content">
+                            <p class="Xtn-Select-title">Live Server</p>
+                            <p class="Xtn-Select-subtitle">developed by Ritwick Dey</p>
+                            <p class="Xtn-Select-subtitle">extension for Visual Studio Code</p>
+                        </div>
+                        <div class="Xtn-Select-backdrop"></div>
+                    </div>
+                    <div class="Xtn-Select" id="Xtn-JB" onclick="XtnConfig_JB()">
+                        <img class="Xtn-Select-logo" src="../Resources/Assets/Images/products/WebStorm.svg" alt="">
+                        <div class="Xtn-Select-content">
+                            <p class="Xtn-Select-title">WebStorm Localhost Server</p>
+                            <p class="Xtn-Select-subtitle">feature for WebStorm</p>
+                        </div>
+                        <div class="Xtn-Select-backdrop"></div>
+                    </div>
+                    <div class="Xtn-Select" id="Xtn-Sublime" onclick="XtnInstall_Sublime()">
+                        <img class="Xtn-Select-logo" src="../Resources/Assets/Images/extensions/LiveServer-Sublime.svg" alt="">
+                        <div class="Xtn-Select-content">
+                            <p class="Xtn-Select-title">Sublime Live Server</p>
+                            <p class="Xtn-Select-subtitle">developed by molnarmark</p>
+                            <p class="Xtn-Select-subtitle">extension for Sublime Text</p>
+                        </div>
+                        <div class="Xtn-Select-backdrop"></div>
+                    </div>
+                    <div class="Xtn-Select" id="Xtn-None" onclick="Xtn_DirectView()">
+                        <img class="Xtn-Select-logo" src="../Resources/Assets/Images/extensions/noextensions.svg" alt="">
+                        <div class="Xtn-Select-content">
+                            <p class="Xtn-Select-title">Raw HTML Preview</p>
+                            <p class="Xtn-Select-subtitle">No additional software &amp; features</p>
+                        </div>
+                        <div class="Xtn-Select-backdrop"></div>
+                    </div>
+                </div>
+            </tutorial-section>
+            <tutorial-section id="Xtn-Selected-Instructions">
+                <div class="tutorial-section-warning">
+                    <p><i class="bx bx-been-here"></i> To continue you need to first select a category from the section above!</p>
+                </div>
+            </tutorial-section>
+        </content>
+    </page>
+</body>
+</html>
